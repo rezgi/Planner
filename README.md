@@ -2,13 +2,14 @@
 A planning app made with Godot
 
 ## ToDo
-- time mode buttons
-- timer countdown
-- display timer
-- display radial duration
-- pause / stop buttons
+- time mode buttons *
+- timer countdown *
+- display timer *
+- display radial duration *
+- pause / stop buttons *
+- logic
 - play sound
-- task list
+- notes
 
 ## Features
 - Counter (pomodoro) : 50-10 / 25-5
