@@ -26,45 +26,6 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="WindowControls" type="HBoxContainer" parent="UI"]
-anchor_right = 1.0
-margin_left = 20.0
-margin_top = 10.0
-margin_right = -20.0
-margin_bottom = 14.0
-rect_min_size = Vector2( 0, 20 )
-alignment = 2
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="btn_minimize" type="Button" parent="UI/WindowControls"]
-margin_left = 292.0
-margin_right = 312.0
-margin_bottom = 20.0
-rect_min_size = Vector2( 20, 0 )
-custom_styles/hover = ExtResource( 3 )
-custom_styles/normal = ExtResource( 4 )
-text = "_"
-
-[node name="btn_minimode" type="Button" parent="UI/WindowControls"]
-margin_left = 316.0
-margin_right = 336.0
-margin_bottom = 20.0
-rect_min_size = Vector2( 20, 0 )
-custom_styles/hover = ExtResource( 3 )
-custom_styles/normal = ExtResource( 4 )
-text = ":"
-
-[node name="btn_close" type="Button" parent="UI/WindowControls"]
-margin_left = 340.0
-margin_right = 360.0
-margin_bottom = 20.0
-rect_min_size = Vector2( 20, 0 )
-custom_styles/hover = ExtResource( 3 )
-custom_styles/normal = ExtResource( 4 )
-text = "x"
-
 [node name="AppMargins" type="MarginContainer" parent="UI"]
 anchor_right = 1.0
 anchor_bottom = 1.0
