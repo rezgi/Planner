@@ -1,3 +1,219 @@
-[gd_scene format=2]
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://Assets/Montserrat/montserrat_regular.tres" type="DynamicFont" id=1]
+[ext_resource path="res://Assets/Montserrat/montserrat_medium.tres" type="DynamicFont" id=2]
+[ext_resource path="res://Styles/btn_flat_orange.tres" type="StyleBox" id=3]
+[ext_resource path="res://Styles/btn_flat_red.tres" type="StyleBox" id=4]
+[ext_resource path="res://Assets/progress_01.png" type="Texture" id=5]
+
+[sub_resource type="StyleBoxLine" id=1]
+color = Color( 1, 0.686275, 0.32549, 1 )
 
 [node name="Main" type="Node"]
+
+[node name="UI" type="Control" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColorRect" type="ColorRect" parent="UI"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0.180392, 0.0666667, 0.176471, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="WindowControls" type="HBoxContainer" parent="UI"]
+anchor_right = 1.0
+margin_left = 20.0
+margin_top = 10.0
+margin_right = -20.0
+margin_bottom = 14.0
+rect_min_size = Vector2( 0, 20 )
+alignment = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="btn_minimize" type="Button" parent="UI/WindowControls"]
+margin_left = 292.0
+margin_right = 312.0
+margin_bottom = 20.0
+rect_min_size = Vector2( 20, 0 )
+custom_styles/hover = ExtResource( 3 )
+custom_styles/normal = ExtResource( 4 )
+text = "_"
+
+[node name="btn_minimode" type="Button" parent="UI/WindowControls"]
+margin_left = 316.0
+margin_right = 336.0
+margin_bottom = 20.0
+rect_min_size = Vector2( 20, 0 )
+custom_styles/hover = ExtResource( 3 )
+custom_styles/normal = ExtResource( 4 )
+text = ":"
+
+[node name="btn_close" type="Button" parent="UI/WindowControls"]
+margin_left = 340.0
+margin_right = 360.0
+margin_bottom = 20.0
+rect_min_size = Vector2( 20, 0 )
+custom_styles/hover = ExtResource( 3 )
+custom_styles/normal = ExtResource( 4 )
+text = "x"
+
+[node name="AppMargins" type="MarginContainer" parent="UI"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 40.0
+margin_top = 40.0
+margin_right = -40.0
+margin_bottom = -40.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MainContainer" type="VBoxContainer" parent="UI/AppMargins"]
+margin_right = 320.0
+margin_bottom = 820.0
+custom_constants/separation = 20
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Counter" type="VBoxContainer" parent="UI/AppMargins/MainContainer"]
+margin_right = 320.0
+margin_bottom = 488.0
+
+[node name="counter_buttons" type="Control" parent="UI/AppMargins/MainContainer/Counter"]
+margin_right = 320.0
+margin_bottom = 40.0
+rect_min_size = Vector2( 0, 40 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HBoxContainer" type="HBoxContainer" parent="UI/AppMargins/MainContainer/Counter/counter_buttons"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+custom_constants/separation = 20
+alignment = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="btn_fifty" type="Button" parent="UI/AppMargins/MainContainer/Counter/counter_buttons/HBoxContainer"]
+margin_left = 10.0
+margin_right = 150.0
+margin_bottom = 40.0
+rect_min_size = Vector2( 140, 0 )
+custom_styles/hover = ExtResource( 3 )
+custom_styles/normal = ExtResource( 4 )
+custom_fonts/font = ExtResource( 1 )
+text = "50 - 10"
+
+[node name="btn_twenty" type="Button" parent="UI/AppMargins/MainContainer/Counter/counter_buttons/HBoxContainer"]
+margin_left = 170.0
+margin_right = 310.0
+margin_bottom = 40.0
+rect_min_size = Vector2( 140, 0 )
+custom_styles/hover = ExtResource( 3 )
+custom_styles/normal = ExtResource( 4 )
+custom_fonts/font = ExtResource( 1 )
+text = "25 - 05"
+
+[node name="counter_display" type="Control" parent="UI/AppMargins/MainContainer/Counter"]
+margin_top = 44.0
+margin_right = 320.0
+margin_bottom = 444.0
+rect_min_size = Vector2( 0, 400 )
+
+[node name="CenterContainer" type="CenterContainer" parent="UI/AppMargins/MainContainer/Counter/counter_display"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="counter_time" type="Label" parent="UI/AppMargins/MainContainer/Counter/counter_display/CenterContainer"]
+margin_left = 60.0
+margin_top = 166.0
+margin_right = 259.0
+margin_bottom = 233.0
+custom_fonts/font = ExtResource( 2 )
+custom_colors/font_color = Color( 0.988235, 0.870588, 0.733333, 1 )
+text = "49 : 59"
+align = 1
+valign = 1
+
+[node name="counter_progress" type="TextureProgress" parent="UI/AppMargins/MainContainer/Counter/counter_display/CenterContainer"]
+margin_left = 10.0
+margin_top = 50.0
+margin_right = 310.0
+margin_bottom = 350.0
+max_value = 60.0
+value = 10.0
+texture_progress = ExtResource( 5 )
+fill_mode = 5
+
+[node name="counter_controls" type="Control" parent="UI/AppMargins/MainContainer/Counter"]
+margin_top = 448.0
+margin_right = 320.0
+margin_bottom = 488.0
+rect_min_size = Vector2( 0, 40 )
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="UI/AppMargins/MainContainer/Counter/counter_controls"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+rect_min_size = Vector2( 0, 40 )
+custom_constants/separation = 20
+alignment = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="btn_pause" type="Button" parent="UI/AppMargins/MainContainer/Counter/counter_controls/HBoxContainer2"]
+margin_left = 20.0
+margin_right = 100.0
+margin_bottom = 40.0
+rect_min_size = Vector2( 80, 0 )
+custom_styles/hover = ExtResource( 3 )
+custom_styles/normal = ExtResource( 4 )
+custom_fonts/font = ExtResource( 1 )
+text = "Pause"
+
+[node name="btn_start" type="Button" parent="UI/AppMargins/MainContainer/Counter/counter_controls/HBoxContainer2"]
+margin_left = 120.0
+margin_right = 200.0
+margin_bottom = 40.0
+rect_min_size = Vector2( 80, 0 )
+custom_styles/hover = ExtResource( 3 )
+custom_styles/normal = ExtResource( 4 )
+custom_fonts/font = ExtResource( 1 )
+text = "Start"
+
+[node name="btn_stop" type="Button" parent="UI/AppMargins/MainContainer/Counter/counter_controls/HBoxContainer2"]
+margin_left = 220.0
+margin_right = 300.0
+margin_bottom = 40.0
+rect_min_size = Vector2( 80, 0 )
+custom_styles/hover = ExtResource( 3 )
+custom_styles/normal = ExtResource( 4 )
+custom_fonts/font = ExtResource( 1 )
+text = "Stop"
+
+[node name="Notes" type="MarginContainer" parent="UI/AppMargins/MainContainer"]
+margin_top = 508.0
+margin_right = 320.0
+margin_bottom = 808.0
+rect_min_size = Vector2( 0, 300 )
+
+[node name="TextEdit" type="TextEdit" parent="UI/AppMargins/MainContainer/Notes"]
+margin_right = 320.0
+margin_bottom = 300.0
+custom_styles/normal = SubResource( 1 )
+custom_fonts/font = ExtResource( 1 )
+wrap_enabled = true

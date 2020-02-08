@@ -18,6 +18,13 @@ _global_script_class_icons={
 config/name="11 - Planner"
 config/icon="res://icon.png"
 
+[display]
+
+window/size/width=400
+window/size/height=900
+window/size/resizable=false
+window/size/borderless=true
+
 [rendering]
 
 environment/default_environment="res://default_env.tres"
