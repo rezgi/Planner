@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Glass_Done1.wav-e34ca404ebd579ee5b7a286bcd18519f.sample"
+
+[deps]
+
+source_file="res://Assets/SFX/Glass_Done1.wav"
+dest_files=[ "res://.import/Glass_Done1.wav-e34ca404ebd579ee5b7a286bcd18519f.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

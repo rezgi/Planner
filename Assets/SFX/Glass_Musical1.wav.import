@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/Glass_Musical1.wav-d1498c2e74ef42897e25908fd9e03755.sample"
+
+[deps]
+
+source_file="res://Assets/SFX/Glass_Musical1.wav"
+dest_files=[ "res://.import/Glass_Musical1.wav-d1498c2e74ef42897e25908fd9e03755.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0
