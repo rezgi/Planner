@@ -189,9 +189,11 @@ wrap_enabled = true
 
 [node name="sfx_work_end" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 7 )
+volume_db = -5.0
 
 [node name="sfx_rest_end" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 8 )
+volume_db = -5.0
 [connection signal="pressed" from="UI/AppMargins/MainContainer/Counter/counter_buttons/HBoxContainer/btn_fifty" to="." method="_on_btn_fifty_pressed"]
 [connection signal="pressed" from="UI/AppMargins/MainContainer/Counter/counter_buttons/HBoxContainer/btn_twenty" to="." method="_on_btn_twenty_pressed"]
 [connection signal="toggled" from="UI/AppMargins/MainContainer/Counter/counter_controls/HBoxContainer2/btn_pause" to="." method="_on_btn_pause_toggled"]
