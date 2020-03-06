@@ -11,6 +11,8 @@ A planning app made with Godot
 - radial bar transition when changing
 - add version info
 - add volume setting
+- condition to use buttons only when selected time
+- pause continue to count
 - smooth bar path animation ?
 - use launchpad colors ?
 - display info text on duration selection
